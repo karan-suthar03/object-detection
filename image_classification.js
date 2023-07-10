@@ -10,9 +10,7 @@ function lol() {
   console.log("loaded");
 }
 function setup() {
-  background(0);
   video = createCapture(VIDEO, videoLoaded);
-  video.hide();
 }
 function videoLoaded() {
   console.log("video loaded");
