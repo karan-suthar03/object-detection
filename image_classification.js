@@ -16,11 +16,12 @@ function setup() {
 }
 function videoLoaded() {
   console.log("video loaded");
-  createCanvas(video.width, video.height);
+  const canvas = createCanvas(video.width, video.height);
+  canvas.parent("canvas-container");
   objectDetector.detect(video, detected);
 }
 function draw() {
-  image(video, 0, 0);
+    clear();
   if (detections) {
     for (let index = 0; index < detections.length; index++) {
       const element = detections[index];
