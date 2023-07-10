@@ -10,6 +10,7 @@ function lol() {
   console.log("loaded");
 }
 function setup() {
+  background(0);
   video = createCapture(VIDEO, videoLoaded);
 }
 function videoLoaded() {
@@ -19,7 +20,7 @@ function videoLoaded() {
   objectDetector.detect(video, detected);
 }
 function draw() {
-    clear();
+  clear();
   if (detections) {
     for (let index = 0; index < detections.length; index++) {
       const element = detections[index];
